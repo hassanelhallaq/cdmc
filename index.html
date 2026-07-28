@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="GAZA / PULSE — an English UI/UX dashboard prototype for community evidence and decision intelligence."
+    >
+    <title>GAZA / PULSE — Community Decision Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="dashboard">
+      <header class="topbar">
+        <a class="brand" href="#overview" aria-label="GAZA PULSE home">
+          <span class="brand-mark" aria-hidden="true">⌁</span>
+          <span>
+            <strong>GAZA / PULSE</strong>
+            <small>Community intelligence center</small>
+          </span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="#overview">Overview</a>
+          <a href="#themes">Thematic areas</a>
+          <a href="#analytics">Analytics</a>
+          <a href="#decisions">Decision center</a>
+          <a href="#survey">Survey builder</a>
+        </nav>
+
+        <div class="top-actions">
+          <label>
+            <span>Period</span>
+            <select aria-label="Reporting period">
+              <option>7 days</option>
+              <option selected>30 days</option>
+              <option>90 days</option>
+            </select>
+          </label>
+          <button class="export-button" type="button">↓ Export report</button>
+        </div>
+      </header>
+
+      <aside class="prototype-note" aria-label="Prototype notice">
+        <span>PROTOTYPE DATA</span>
+        <p>
+          This is a UI/UX prototype. All figures are illustrative; filters and
+          actions are visual until live survey, FGD and KII feeds are connected.
+        </p>
+        <b>Last refresh 13:45</b>
+      </aside>
+
+      <div class="content-shell">
+        <section class="hero" id="overview">
+          <div class="hero-copy">
+            <span class="eyebrow">DECISION INTELLIGENCE CENTER</span>
+            <h1>Community evidence,<br><em>measured for action.</em></h1>
+            <p>
+              A unified command center that turns perceptions, delivery, risk
+              and evidence quality into transparent decisions across Gaza.
+            </p>
+            <div class="method-chips" aria-label="Evidence sources">
+              <span>Surveys <b>1,248</b></span>
+              <span>FGDs <b>12</b></span>
+              <span>KIIs <b>16</b></span>
+              <span>Governorates <b>5</b></span>
+            </div>
+          </div>
+
+          <div class="hero-decision">
+            <div class="readiness-ring" style="--ring-value: 81.5%">
+              <span>
+                <strong>81.5</strong>
+                <small>Decision readiness</small>
+              </span>
+            </div>
+            <div>
+              <span class="status-live"><i></i>Ready with conditions</span>
+              <h3>Social Cohesion</h3>
+              <p>
+                Evidence is strong enough for a targeted response. Close the
+                geographic gap before making population-wide claims.
+              </p>
+              <div class="threshold">
+                <span>Decision threshold</span>
+                <i><b style="width:81.5%"></b></i>
+                <em>70</em>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="theme-section" id="themes">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">THEMATIC AREAS</span>
+              <h2>Choose the decision lens</h2>
+              <p>
+                Four thematic gateways organise questions, evidence, charts and
+                recommendations into a clear analytical structure.
+              </p>
+            </div>
+          </div>
+
+          <div class="theme-grid">
+            <a
+              class="theme-card active"
+              href="#analytics"
+              style="--tile:#9b7cff;--tile-rgb:155,124,255"
+            >
+              <span class="theme-top"><i>◎</i><b>72.4</b></span>
+              <span class="theme-content">
+                <strong>Social Cohesion</strong>
+                <small>
+                  Cohesion, trust, protection and meaningful community
+                  participation.
+                </small>
+              </span>
+              <span class="theme-foot"><em>n=1,248</em><b>Open analytics →</b></span>
+            </a>
+
+            <a
+              class="theme-card"
+              href="#analytics"
+              style="--tile:#2dd4bf;--tile-rgb:45,212,191"
+            >
+              <span class="theme-top"><i>↗</i><b>64.8</b></span>
+              <span class="theme-content">
+                <strong>Economic Resilience</strong>
+                <small>
+                  Livelihoods, purchasing power, employment and assistance
+                  equity.
+                </small>
+              </span>
+              <span class="theme-foot"><em>n=1,103</em><b>Open analytics →</b></span>
+            </a>
+
+            <a
+              class="theme-card"
+              href="#analytics"
+              style="--tile:#f6b84a;--tile-rgb:246,184,74"
+            >
+              <span class="theme-top"><i>◇</i><b>58.6</b></span>
+              <span class="theme-content">
+                <strong>Civic &amp; Political</strong>
+                <small>
+                  Trust, representation, participation and access to
+                  decision-making.
+                </small>
+              </span>
+              <span class="theme-foot"><em>n=982</em><b>Open analytics →</b></span>
+            </a>
+
+            <a
+              class="theme-card"
+              href="#analytics"
+              style="--tile:#4ade80;--tile-rgb:74,222,128"
+            >
+              <span class="theme-top"><i>⌁</i><b>76.2</b></span>
+              <span class="theme-content">
+                <strong>Environmental Safety</strong>
+                <small>
+                  Water, waste, shelter and environmental health risks.
+                </small>
+              </span>
+              <span class="theme-foot"><em>n=1,187</em><b>Open analytics →</b></span>
+            </a>
+          </div>
+        </section>
+
+        <section class="analytics-shell" id="analytics">
+          <div class="analytics-header">
+            <div class="selected-theme">
+              <span>◎</span>
+              <div>
+                <small>SELECTED THEME</small>
+                <h2>Social Cohesion</h2>
+                <p>
+                  Cohesion, trust, protection and meaningful community
+                  participation.
+                </p>
+              </div>
+            </div>
+
+            <div class="filters" aria-label="Static demographic filters">
+              <label>
+                <span>Governorate</span>
+                <select>
+                  <option selected>All governorates</option>
+                  <option>Gaza</option>
+                  <option>Middle Area</option>
+                  <option>Khan Younis</option>
+                  <option>North Gaza</option>
+                  <option>Rafah</option>
+                </select>
+              </label>
+              <label>
+                <span>Gender</span>
+                <select>
+                  <option selected>All genders</option>
+                  <option>Women</option>
+                  <option>Men</option>
+                </select>
+              </label>
+              <label>
+                <span>Age group</span>
+                <select>
+                  <option selected>All ages</option>
+                  <option>18–24</option>
+                  <option>25–44</option>
+                  <option>45+</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <article class="kpi-card">
+              <div class="kpi-head"><span>Valid responses</span><i></i></div>
+              <div class="kpi-value">
+                <strong>1,248</strong><em>+12%</em>
+              </div>
+              <svg class="sparkline" viewBox="0 0 144 36" aria-hidden="true">
+                <polyline points="0,30 24,23 48,26 72,18 96,15 120,9 144,4"></polyline>
+              </svg>
+              <div class="kpi-progress">
+                <i><b style="width:86%"></b></i>
+                <small>Filtered evidence base</small>
+              </div>
+            </article>
+
+            <article class="kpi-card">
+              <div class="kpi-head"><span>Theme index</span><i></i></div>
+              <div class="kpi-value">
+                <strong>72.4</strong><b>/100</b><em>+2.4</em>
+              </div>
+              <svg class="sparkline" viewBox="0 0 144 36" aria-hidden="true">
+                <polyline points="0,29 24,22 48,25 72,17 96,14 120,8 144,4"></polyline>
+              </svg>
+              <div class="kpi-progress">
+                <i><b style="width:72.4%"></b></i>
+                <small>Weighted outcome score</small>
+              </div>
+            </article>
+
+            <article class="kpi-card">
+              <div class="kpi-head"><span>Signal strength</span><i></i></div>
+              <div class="kpi-value">
+                <strong>78</strong><b>/100</b><em>+6</em>
+              </div>
+              <svg class="sparkline" viewBox="0 0 144 36" aria-hidden="true">
+                <polyline points="0,29 24,25 48,20 72,22 96,13 120,9 144,5"></polyline>
+              </svg>
+              <div class="kpi-progress">
+                <i><b style="width:78%"></b></i>
+                <small>Frequency × severity × velocity</small>
+              </div>
+            </article>
+
+            <article class="kpi-card">
+              <div class="kpi-head"><span>Priority pressure</span><i></i></div>
+              <div class="kpi-value">
+                <strong>82</strong><b>/100</b><em>+9%</em>
+              </div>
+              <svg class="sparkline" viewBox="0 0 144 36" aria-hidden="true">
+                <polyline points="0,31 24,27 48,21 72,15 96,10 120,7 144,4"></polyline>
+              </svg>
+              <div class="kpi-progress">
+                <i><b style="width:82%"></b></i>
+                <small>Decision trigger ≥ 75</small>
+              </div>
+            </article>
+
+            <article class="kpi-card">
+              <div class="kpi-head"><span>Evidence confidence</span><i></i></div>
+              <div class="kpi-value">
+                <strong>91</strong><b>%</b><em>+3%</em>
+              </div>
+              <svg class="sparkline" viewBox="0 0 144 36" aria-hidden="true">
+                <polyline points="0,29 24,25 48,20 72,15 96,17 120,9 144,4"></polyline>
+              </svg>
+              <div class="kpi-progress">
+                <i><b style="width:91%"></b></i>
+                <small>Triangulation + sample quality</small>
+              </div>
+            </article>
+
+            <article class="kpi-card">
+              <div class="kpi-head"><span>Response rate</span><i></i></div>
+              <div class="kpi-value">
+                <strong>86</strong><b>%</b><em>+4%</em>
+              </div>
+              <svg class="sparkline" viewBox="0 0 144 36" aria-hidden="true">
+                <polyline points="0,30 24,25 48,27 72,19 96,14 120,9 144,4"></polyline>
+              </svg>
+              <div class="kpi-progress">
+                <i><b style="width:86%"></b></i>
+                <small>Completed / contacted</small>
+              </div>
+            </article>
+          </div>
+
+          <div class="primary-grid">
+            <article class="panel outcome-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">OUTCOME TREND</span>
+                  <h2>Outcome trajectory</h2>
+                  <p>
+                    A seven-cycle view of the theme index, trust and service
+                    access.
+                  </p>
+                </div>
+                <span class="evidence-badge">n=1,248</span>
+              </div>
+
+              <div class="outcome-chart">
+                <div class="chart-legend">
+                  <span><i class="legend-accent"></i>Theme index <b>72.4</b></span>
+                  <span><i class="legend-cyan"></i>Trust <b>62.3</b></span>
+                  <span><i class="legend-lime"></i>Service access <b>68.5</b></span>
+                </div>
+                <svg viewBox="0 0 820 338" role="img" aria-label="Seven-cycle outcome trend">
+                  <defs>
+                    <linearGradient id="outcome-area" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#9b7cff" stop-opacity=".28"></stop>
+                      <stop offset="1" stop-color="#9b7cff" stop-opacity="0"></stop>
+                    </linearGradient>
+                  </defs>
+
+                  <g class="chart-grid">
+                    <line x1="42" x2="790" y1="272" y2="272"></line>
+                    <line x1="42" x2="790" y1="216" y2="216"></line>
+                    <line x1="42" x2="790" y1="160" y2="160"></line>
+                    <line x1="42" x2="790" y1="104" y2="104"></line>
+                    <line x1="42" x2="790" y1="48" y2="48"></line>
+                  </g>
+                  <g class="axis-labels">
+                    <text x="8" y="276">50</text>
+                    <text x="8" y="220">60</text>
+                    <text x="8" y="164">70</text>
+                    <text x="8" y="108">80</text>
+                    <text x="8" y="52">90</text>
+                  </g>
+
+                  <path
+                    class="trend-area"
+                    d="M42 194 L166 183 L290 189 L414 172 L538 166 L662 155 L786 147 L786 282 L42 282 Z"
+                  ></path>
+                  <polyline
+                    class="series-line series-accent"
+                    points="42,194 166,183 290,189 414,172 538,166 662,155 786,147"
+                  ></polyline>
+                  <polyline
+                    class="series-line series-cyan"
+                    points="42,256 166,244 290,248 414,229 538,222 662,209 786,203"
+                  ></polyline>
+                  <polyline
+                    class="series-line series-lime"
+                    points="42,228 166,215 290,217 414,198 538,189 662,175 786,169"
+                  ></polyline>
+
+                  <g class="trend-dots dots-accent">
+                    <circle cx="42" cy="194" r="3"></circle>
+                    <circle cx="166" cy="183" r="3"></circle>
+                    <circle cx="290" cy="189" r="3"></circle>
+                    <circle cx="414" cy="172" r="3"></circle>
+                    <circle cx="538" cy="166" r="3"></circle>
+                    <circle cx="662" cy="155" r="3"></circle>
+                    <circle cx="786" cy="147" r="5"></circle>
+                  </g>
+                  <g class="trend-dots dots-cyan">
+                    <circle cx="42" cy="256" r="3"></circle>
+                    <circle cx="166" cy="244" r="3"></circle>
+                    <circle cx="290" cy="248" r="3"></circle>
+                    <circle cx="414" cy="229" r="3"></circle>
+                    <circle cx="538" cy="222" r="3"></circle>
+                    <circle cx="662" cy="209" r="3"></circle>
+                    <circle cx="786" cy="203" r="5"></circle>
+                  </g>
+                  <g class="trend-dots dots-lime">
+                    <circle cx="42" cy="228" r="3"></circle>
+                    <circle cx="166" cy="215" r="3"></circle>
+                    <circle cx="290" cy="217" r="3"></circle>
+                    <circle cx="414" cy="198" r="3"></circle>
+                    <circle cx="538" cy="189" r="3"></circle>
+                    <circle cx="662" cy="175" r="3"></circle>
+                    <circle cx="786" cy="169" r="5"></circle>
+                  </g>
+
+                  <g class="axis-labels cycle-labels">
+                    <text x="42" y="322" text-anchor="middle">Cycle 1</text>
+                    <text x="166" y="322" text-anchor="middle">2</text>
+                    <text x="290" y="322" text-anchor="middle">3</text>
+                    <text x="414" y="322" text-anchor="middle">4</text>
+                    <text x="538" y="322" text-anchor="middle">5</text>
+                    <text x="662" y="322" text-anchor="middle">6</text>
+                    <text x="786" y="322" text-anchor="middle">Current</text>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="decision-rule">
+                <span>DECISION RULE</span>
+                <p>
+                  Escalate when the index falls for two consecutive cycles or
+                  the gap to target exceeds 10 points.
+                </p>
+                <b class="rule-pass">Stable / improving</b>
+              </div>
+            </article>
+
+            <div class="side-stack">
+              <article class="panel geo-coverage">
+                <div class="panel-heading">
+                  <div>
+                    <span class="eyebrow">GEOGRAPHIC COVERAGE</span>
+                    <h2>Coverage by governorate</h2>
+                    <p>
+                      Achieved sample against the minimum comparison threshold.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="coverage-row">
+                  <span><b>Gaza</b><small>n=354</small></span>
+                  <i><em style="width:98%"></em></i><strong>98%</strong>
+                </div>
+                <div class="coverage-row">
+                  <span><b>Middle Area</b><small>n=286</small></span>
+                  <i><em style="width:95%"></em></i><strong>95%</strong>
+                </div>
+                <div class="coverage-row">
+                  <span><b>Khan Younis</b><small>n=241</small></span>
+                  <i><em style="width:80%"></em></i><strong>80%</strong>
+                </div>
+                <div class="coverage-row">
+                  <span><b>North Gaza</b><small>n=219</small></span>
+                  <i><em style="width:73%"></em></i><strong>73%</strong>
+                </div>
+                <div class="coverage-row gap">
+                  <span><b>Rafah</b><small>n=148</small></span>
+                  <i><em style="width:57%"></em></i><strong>57%</strong>
+                </div>
+                <div class="threshold-note">
+                  Minimum comparison threshold: <b>60%</b>
+                </div>
+              </article>
+
+              <article class="panel live-insights">
+                <div class="panel-heading">
+                  <div>
+                    <span class="eyebrow">EVIDENCE INSIGHTS</span>
+                    <h2>Decision signals</h2>
+                    <p>Ranked by urgency, confidence and reach.</p>
+                  </div>
+                </div>
+                <div class="insight positive">
+                  <span>↗</span>
+                  <div>
+                    <b>Cohesion improved in Middle Area</b>
+                    <small>+8 points after facilitated dialogue sessions.</small>
+                  </div>
+                </div>
+                <div class="insight critical">
+                  <span>!</span>
+                  <div>
+                    <b>Youth are underrepresented in Rafah</b>
+                    <small>The current evidence gap is 34 responses.</small>
+                  </div>
+                </div>
+                <div class="insight watch">
+                  <span>◉</span>
+                  <div>
+                    <b>Trust is lower among people aged 45+</b>
+                    <small>11 points below the filtered average.</small>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="chart-grid-three">
+            <article class="panel comparison-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">BASELINE TO TARGET</span>
+                  <h2>Round comparison</h2>
+                  <p>
+                    Index, trust and access compared across baseline, current
+                    round and target.
+                  </p>
+                </div>
+              </div>
+
+              <div class="comparison-chart">
+                <div class="comparison-legend">
+                  <span><i class="violet"></i>Index</span>
+                  <span><i class="blue"></i>Trust</span>
+                  <span><i class="amber"></i>Access</span>
+                </div>
+                <div class="bar-groups">
+                  <div class="bar-group">
+                    <div class="bars">
+                      <span class="bar-0" style="height:58%"><b>58</b></span>
+                      <span class="bar-1" style="height:55%"><b>55</b></span>
+                      <span class="bar-2" style="height:66%"><b>66</b></span>
+                    </div>
+                    <small>Baseline</small>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bars">
+                      <span class="bar-0" style="height:65%"><b>65</b></span>
+                      <span class="bar-1" style="height:59%"><b>59</b></span>
+                      <span class="bar-2" style="height:77%"><b>77</b></span>
+                    </div>
+                    <small>Round 1</small>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bars">
+                      <span class="bar-0" style="height:72%"><b>72</b></span>
+                      <span class="bar-1" style="height:61%"><b>61</b></span>
+                      <span class="bar-2" style="height:78%"><b>78</b></span>
+                    </div>
+                    <small>Current</small>
+                  </div>
+                  <div class="bar-group">
+                    <div class="bars">
+                      <span class="bar-0" style="height:80%"><b>80</b></span>
+                      <span class="bar-1" style="height:70%"><b>70</b></span>
+                      <span class="bar-2" style="height:85%"><b>85</b></span>
+                    </div>
+                    <small>Target</small>
+                  </div>
+                </div>
+              </div>
+              <div class="metric-definition">
+                <b>Strength:</b> current index is 14 points above baseline;
+                target gap is 8 points.
+              </div>
+            </article>
+
+            <article class="panel radar-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">STRENGTH PROFILE</span>
+                  <h2>Five-dimension radar</h2>
+                  <p>
+                    A balanced view prevents one strong metric from hiding weak
+                    dimensions.
+                  </p>
+                </div>
+              </div>
+              <svg
+                class="radar"
+                viewBox="0 0 260 250"
+                role="img"
+                aria-label="Five-dimension strength radar"
+              >
+                <polygon points="130,103.6 147.5,116.3 140.8,136.9 119.2,136.9 112.5,116.3" class="radar-grid"></polygon>
+                <polygon points="130,85.2 165,110.6 151.6,151.8 108.4,151.8 95,110.6" class="radar-grid"></polygon>
+                <polygon points="130,66.8 182.5,104.9 162.4,166.7 97.6,166.7 77.5,104.9" class="radar-grid"></polygon>
+                <polygon points="130,48.4 200,99.2 173.3,181.6 86.7,181.6 60,99.2" class="radar-grid"></polygon>
+                <polygon points="130,30 217.5,93.6 184.1,196.4 75.9,196.4 42.5,93.6" class="radar-grid"></polygon>
+                <line x1="130" y1="122" x2="130" y2="30" class="radar-axis"></line>
+                <line x1="130" y1="122" x2="217.5" y2="93.6" class="radar-axis"></line>
+                <line x1="130" y1="122" x2="184.1" y2="196.4" class="radar-axis"></line>
+                <line x1="130" y1="122" x2="75.9" y2="196.4" class="radar-axis"></line>
+                <line x1="130" y1="122" x2="42.5" y2="93.6" class="radar-axis"></line>
+                <polygon
+                  points="130,53.9 183.4,104.7 166.8,172.6 88.3,179.2 67.9,101.8"
+                  class="radar-value"
+                ></polygon>
+                <circle cx="130" cy="53.9" r="4"></circle>
+                <circle cx="183.4" cy="104.7" r="4"></circle>
+                <circle cx="166.8" cy="172.6" r="4"></circle>
+                <circle cx="88.3" cy="179.2" r="4"></circle>
+                <circle cx="67.9" cy="101.8" r="4"></circle>
+                <text x="130" y="14" text-anchor="middle">Cohesion</text>
+                <text x="239" y="88" text-anchor="middle">Trust</text>
+                <text x="196" y="224" text-anchor="middle">Access</text>
+                <text x="64" y="224" text-anchor="middle">Safety</text>
+                <text x="21" y="88" text-anchor="middle">Participation</text>
+              </svg>
+              <div class="radar-summary">
+                <span>Strongest <b>Safety</b></span>
+                <span>Weakest <b>Trust</b></span>
+              </div>
+            </article>
+
+            <article class="panel correlation-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">RELATIONSHIP TEST</span>
+                  <h2>Feedback closure vs trust</h2>
+                  <p>A directional correlation, not proof of causation.</p>
+                </div>
+                <span class="evidence-badge">r=0.72</span>
+              </div>
+              <div class="scatter-wrap">
+                <svg
+                  viewBox="0 0 340 230"
+                  role="img"
+                  aria-label="Feedback closure and trust correlation"
+                >
+                  <line x1="40" y1="195" x2="320" y2="195" class="axis"></line>
+                  <line x1="40" y1="20" x2="40" y2="195" class="axis"></line>
+                  <g class="chart-grid">
+                    <line x1="107.5" x2="107.5" y1="20" y2="195"></line>
+                    <line x1="175" x2="175" y1="20" y2="195"></line>
+                    <line x1="242.5" x2="242.5" y1="20" y2="195"></line>
+                    <line x1="310" x2="310" y1="20" y2="195"></line>
+                  </g>
+                  <g class="axis-labels">
+                    <text x="107.5" y="214" text-anchor="middle">25%</text>
+                    <text x="175" y="214" text-anchor="middle">50%</text>
+                    <text x="242.5" y="214" text-anchor="middle">75%</text>
+                    <text x="310" y="214" text-anchor="middle">100%</text>
+                    <text x="180" y="228" text-anchor="middle">
+                      Feedback cases closed within 72h
+                    </text>
+                  </g>
+                  <line x1="78" y1="170" x2="285" y2="42" class="regression"></line>
+                  <g class="scatter-points">
+                    <circle cx="88.6" cy="150.8" r="5"></circle>
+                    <circle cx="104.8" cy="142.3" r="5"></circle>
+                    <circle cx="123.7" cy="135.5" r="5"></circle>
+                    <circle cx="145.3" cy="120.2" r="5"></circle>
+                    <circle cx="161.5" cy="121.9" r="5"></circle>
+                    <circle cx="180.4" cy="101.5" r="5"></circle>
+                    <circle cx="196.6" cy="94.7" r="5"></circle>
+                    <circle cx="210.1" cy="91.3" r="5"></circle>
+                    <circle cx="223.6" cy="76" r="5"></circle>
+                    <circle cx="239.8" cy="72.6" r="5"></circle>
+                    <circle cx="253.3" cy="59" r="5"></circle>
+                    <circle cx="274.9" cy="52.2" r="5"></circle>
+                  </g>
+                </svg>
+                <div class="correlation-score">
+                  <small>Correlation</small>
+                  <strong>r = 0.72</strong>
+                  <span>Strong relationship</span>
+                </div>
+              </div>
+              <div class="metric-definition">
+                <b>Decision use:</b> prioritise faster closure where trust is
+                low, then test change in the next cycle.
+              </div>
+            </article>
+          </div>
+
+          <div class="signals-grid">
+            <article class="panel priority-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">COMMUNITY SIGNALS</span>
+                  <h2>Priority issue ranking</h2>
+                  <p>
+                    Composite score = frequency 35% + severity 35% + velocity
+                    20% + reach 10%.
+                  </p>
+                </div>
+              </div>
+              <div class="priority-row">
+                <span>01</span>
+                <div><b>Inter-community cohesion</b><i><em style="width:82%"></em></i></div>
+                <strong>82</strong><small class="up">+9%</small>
+              </div>
+              <div class="priority-row">
+                <span>02</span>
+                <div><b>Safety and protection</b><i><em style="width:74%"></em></i></div>
+                <strong>74</strong><small class="up">+6%</small>
+              </div>
+              <div class="priority-row">
+                <span>03</span>
+                <div><b>Trust in local actors</b><i><em style="width:61%"></em></i></div>
+                <strong>61</strong><small class="down">−3%</small>
+              </div>
+              <div class="priority-row">
+                <span>04</span>
+                <div><b>Women and youth participation</b><i><em style="width:57%"></em></i></div>
+                <strong>57</strong><small class="up">+12%</small>
+              </div>
+              <div class="priority-row">
+                <span>05</span>
+                <div><b>Access to feedback channels</b><i><em style="width:52%"></em></i></div>
+                <strong>52</strong><small class="up">+4%</small>
+              </div>
+            </article>
+
+            <article class="panel sentiment-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">SENTIMENT MIX</span>
+                  <h2>Community tone</h2>
+                  <p>Sentiment is interpreted with issue severity, never alone.</p>
+                </div>
+              </div>
+              <div class="sentiment-content">
+                <div class="sentiment-donut">
+                  <span><strong>+8.4</strong><small>net change</small></span>
+                </div>
+                <div>
+                  <span><i class="positive-dot"></i>Positive <b>48%</b></span>
+                  <span><i class="neutral-dot"></i>Neutral <b>31%</b></span>
+                  <span><i class="negative-dot"></i>Negative <b>21%</b></span>
+                </div>
+              </div>
+              <blockquote>
+                “Trust improves where feedback loops close in under 72 hours.”
+              </blockquote>
+            </article>
+
+            <article class="panel risk-panel">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">DO NO HARM</span>
+                  <h2>Risk heatmap</h2>
+                  <p>
+                    Likelihood × impact; high-zone risks require mitigation
+                    before rollout.
+                  </p>
+                </div>
+              </div>
+              <div class="risk-chart">
+                <div class="risk-y">Impact →</div>
+                <div class="heatmap" aria-label="Risk likelihood and impact heatmap">
+                  <span class="heat-low"></span><span class="heat-low"></span><span class="heat-mid"></span><span class="heat-mid"></span><span class="heat-high"></span>
+                  <span class="heat-low"></span><span class="heat-mid"></span><span class="heat-mid"></span><span class="heat-high"></span><span class="heat-high"></span>
+                  <span class="heat-low"></span><span class="heat-mid"></span><span class="heat-mid"></span><span class="heat-high"></span><span class="heat-high"></span>
+                  <span class="heat-low"></span><span class="heat-low"></span><span class="heat-mid"></span><span class="heat-mid"></span><span class="heat-high"></span>
+                  <span class="heat-low"></span><span class="heat-low"></span><span class="heat-low"></span><span class="heat-mid"></span><span class="heat-mid"></span>
+                  <b style="grid-column:4;grid-row:2" title="Enumerator access">R1</b>
+                  <b style="grid-column:5;grid-row:3" title="Participant privacy">R2</b>
+                  <b style="grid-column:3;grid-row:2" title="Rafah sample gap">R3</b>
+                  <b style="grid-column:2;grid-row:3" title="Expectation harm">R4</b>
+                </div>
+                <div class="risk-x">Likelihood →</div>
+                <div class="risk-key">
+                  <span><b>R1</b>Enumerator access</span>
+                  <span><b>R2</b>Participant privacy</span>
+                  <span><b>R3</b>Rafah sample gap</span>
+                  <span><b>R4</b>Expectation harm</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="decision-center panel" id="decisions">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">DECISION MODEL</span>
+              <h2>Decision readiness and recommended action</h2>
+              <p>
+                A transparent weighted model shows exactly why the dashboard
+                recommends action.
+              </p>
+            </div>
+            <span class="evidence-badge">81.5/100</span>
+          </div>
+
+          <div class="decision-layout">
+            <div class="formula-card">
+              <span class="formula-label">WEIGHTED SCORE</span>
+              <h3>Social Cohesion: act with targeted safeguards</h3>
+              <p>
+                Readiness combines urgency, population reach, evidence
+                confidence, trend velocity and operational feasibility.
+              </p>
+              <div class="formula">
+                <div>
+                  <span><b>Priority</b><small>30% weight</small></span>
+                  <i><em style="width:82%;background:#9b7cff"></em></i>
+                  <strong>82</strong>
+                </div>
+                <div>
+                  <span><b>Reach</b><small>20% weight</small></span>
+                  <i><em style="width:74%;background:#22d3ee"></em></i>
+                  <strong>74</strong>
+                </div>
+                <div>
+                  <span><b>Confidence</b><small>25% weight</small></span>
+                  <i><em style="width:91%;background:#a3e635"></em></i>
+                  <strong>91</strong>
+                </div>
+                <div>
+                  <span><b>Velocity</b><small>15% weight</small></span>
+                  <i><em style="width:84%;background:#f6b84a"></em></i>
+                  <strong>84</strong>
+                </div>
+                <div>
+                  <span><b>Feasibility</b><small>10% weight</small></span>
+                  <i><em style="width:68%;background:#fb7185"></em></i>
+                  <strong>68</strong>
+                </div>
+              </div>
+              <div class="formula-equation">
+                Readiness = Σ (metric × weight) = <b>81.5</b>
+              </div>
+            </div>
+
+            <div class="action-card">
+              <span class="action-priority">P1 · HIGH PRIORITY</span>
+              <h3>
+                Expand dialogue sessions in Rafah and North Gaza, with a
+                targeted youth and women sample in the next collection wave.
+              </h3>
+              <div class="action-criteria">
+                <span><small>Evidence</small><b>91%</b></span>
+                <span><small>Population reach</small><b>74%</b></span>
+                <span><small>Urgency</small><b>82/100</b></span>
+              </div>
+              <div class="action-steps">
+                <div>
+                  <span>01</span>
+                  <p>
+                    <b>Validate the gap</b>
+                    Run a focused Rafah sample before generalising.
+                  </p>
+                </div>
+                <div>
+                  <span>02</span>
+                  <p>
+                    <b>Trigger response</b>
+                    Assign an owner and a 72-hour closure target.
+                  </p>
+                </div>
+                <div>
+                  <span>03</span>
+                  <p>
+                    <b>Measure effect</b>
+                    Compare trust and severity in the next cycle.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-grid">
+          <article class="panel sample-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">SAMPLE PROFILE</span>
+                <h2>Who is represented?</h2>
+                <p>
+                  Distribution and inclusion checks for the filtered evidence
+                  base.
+                </p>
+              </div>
+            </div>
+            <div class="sample-layout">
+              <div class="gender-donut">
+                <span><b>52%</b><small>Women</small></span>
+              </div>
+              <div class="sample-legend">
+                <span><i class="women"></i>Women <b>52%</b></span>
+                <span><i class="men"></i>Men <b>47%</b></span>
+                <span><i class="other"></i>Other / unspecified <b>1%</b></span>
+              </div>
+              <div class="age-profile">
+                <div><span>18–24</span><i><em style="width:31%"></em></i><b>31%</b></div>
+                <div><span>25–34</span><i><em style="width:34%"></em></i><b>34%</b></div>
+                <div><span>35–44</span><i><em style="width:20%"></em></i><b>20%</b></div>
+                <div><span>45+</span><i><em style="width:15%"></em></i><b>15%</b></div>
+              </div>
+            </div>
+            <div class="inclusion-cards">
+              <span><b>12.6%</b>Disability inclusion</span>
+              <span><b>37%</b>Displaced households</span>
+              <span><b>41%</b>Youth</span>
+              <span><b>68%</b>Urban coverage</span>
+            </div>
+          </article>
+
+          <article class="panel response-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">RESPONSE LOOP</span>
+                <h2>From signal to closure</h2>
+                <p>
+                  Conversion at every stage identifies the operational
+                  bottleneck.
+                </p>
+              </div>
+            </div>
+            <div class="funnel">
+              <div style="width:100%"><span>1</span><b>1,248</b><small>Signals received</small></div>
+              <div style="width:88%"><span>2</span><b>1,198</b><small>Verified</small></div>
+              <div style="width:67%"><span>3</span><b>412</b><small>Referred</small></div>
+              <div style="width:53%"><span>4</span><b>356</b><small>Actioned</small></div>
+              <div style="width:41%"><span>5</span><b>264</b><small>Closed</small></div>
+            </div>
+            <div class="funnel-metrics">
+              <span>Verification rate <b>96%</b></span>
+              <span>Referral-to-closure <b>64%</b></span>
+              <span>Median response <b>3.2 days</b></span>
+            </div>
+          </article>
+        </section>
+
+        <section class="panel activity-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">ACTIVITY DELIVERY</span>
+              <h2>Delivery and output matrix</h2>
+              <p>
+                Targets, achievement and delivery status linked to the evidence
+                cycle.
+              </p>
+            </div>
+            <span class="evidence-badge">17 / 23 complete</span>
+          </div>
+          <div class="activity-table">
+            <div class="activity-head">
+              <span>Component / activity</span>
+              <span>Target</span>
+              <span>Achieved</span>
+              <span>Delivery</span>
+              <span>Status</span>
+              <span>Decision implication</span>
+            </div>
+
+            <div class="activity-row">
+              <span><small>01</small><b>Baseline perception survey</b></span>
+              <span>600 responses</span><span>600</span>
+              <span class="delivery"><i><em style="width:100%"></em></i><b>100%</b></span>
+              <span><em class="status complete">Complete</em></span>
+              <span>Use as comparison anchor</span>
+            </div>
+            <div class="activity-row">
+              <span><small>02</small><b>Focus group discussions</b></span>
+              <span>8 FGDs</span><span>8</span>
+              <span class="delivery"><i><em style="width:100%"></em></i><b>100%</b></span>
+              <span><em class="status complete">Complete</em></span>
+              <span>Triangulates social signals</span>
+            </div>
+            <div class="activity-row">
+              <span><small>03</small><b>Key informant interviews</b></span>
+              <span>16 KIIs</span><span>16</span>
+              <span class="delivery"><i><em style="width:100%"></em></i><b>100%</b></span>
+              <span><em class="status complete">Complete</em></span>
+              <span>Validates feasibility</span>
+            </div>
+            <div class="activity-row">
+              <span><small>04</small><b>Community monitoring rounds</b></span>
+              <span>2 rounds</span><span>1</span>
+              <span class="delivery"><i><em style="width:50%"></em></i><b>50%</b></span>
+              <span><em class="status track">On track</em></span>
+              <span>Wait for second trend point</span>
+            </div>
+            <div class="activity-row">
+              <span><small>05</small><b>Public pulse briefs</b></span>
+              <span>2 briefs</span><span>1</span>
+              <span class="delivery"><i><em style="width:50%"></em></i><b>50%</b></span>
+              <span><em class="status track">On track</em></span>
+              <span>Publish after gap correction</span>
+            </div>
+            <div class="activity-row">
+              <span><small>06</small><b>Analytical recommendation report</b></span>
+              <span>1 report</span><span>0.4</span>
+              <span class="delivery"><i><em style="width:40%"></em></i><b>40%</b></span>
+              <span><em class="status risk">At risk</em></span>
+              <span>Escalate owner and deadline</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel confidence-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">DATA CONFIDENCE</span>
+              <h2>Evidence quality for decision use</h2>
+              <p>
+                Quality metrics determine how strongly findings can be
+                generalised.
+              </p>
+            </div>
+            <span class="evidence-badge">High confidence</span>
+          </div>
+
+          <div class="confidence-grid">
+            <article class="confidence-cyan">
+              <span>Valid records</span><strong>96%</strong><small>1,198 / 1,248</small>
+              <i><em style="width:96%"></em></i>
+            </article>
+            <article class="confidence-lime">
+              <span>Field completion</span><strong>92%</strong><small>+3.1 vs prior round</small>
+              <i><em style="width:92%"></em></i>
+            </article>
+            <article class="confidence-violet">
+              <span>Data freshness</span><strong>88%</strong><small>Synced today 13:45</small>
+              <i><em style="width:88%"></em></i>
+            </article>
+            <article class="confidence-cyan">
+              <span>Answer consistency</span><strong>93%</strong><small>Within acceptable range</small>
+              <i><em style="width:93%"></em></i>
+            </article>
+            <article class="confidence-amber">
+              <span>Sample balance</span><strong>74%</strong><small>Rafah gap remains</small>
+              <i><em style="width:74%"></em></i>
+            </article>
+            <article class="confidence-red">
+              <span>Duplicate records</span><strong>1.9%</strong><small>24 under review</small>
+              <i><em style="width:19%"></em></i>
+            </article>
+          </div>
+
+          <div class="confidence-rule">
+            <span>✓</span>
+            <p>
+              <b>Current use:</b> suitable for targeted operational decisions.
+              Not yet suitable for population-wide comparison in Rafah.
+            </p>
+            <em>Review threshold: sample balance ≥ 80%</em>
+          </div>
+        </section>
+
+        <section class="survey-section" id="survey">
+          <div class="section-heading survey-heading">
+            <div>
+              <span class="eyebrow">SURVEY BUILDER</span>
+              <h2>Connect questions to decision metrics</h2>
+              <p>
+                Control answer type, required fields and options. Every question
+                must map to a metric or decision rule.
+              </p>
+            </div>
+            <button class="primary-button" type="button">＋ Add question</button>
+          </div>
+
+          <div class="survey-layout">
+            <div class="question-list">
+              <article class="question-card">
+                <span class="question-number">01</span>
+                <div>
+                  <div class="question-head">
+                    <span>
+                      <small>LINKED TO · SOCIAL</small>
+                      <h3>Which issue most affects your daily life?</h3>
+                    </span>
+                    <button class="required-toggle on" type="button">
+                      <i></i>Required
+                    </button>
+                  </div>
+                  <div class="question-controls">
+                    <label>
+                      <span>Answer type</span>
+                      <select><option>Text answer</option></select>
+                    </label>
+                    <div class="control-placeholder">Open response coding</div>
+                    <div class="metric-link">
+                      <small>Decision metric</small><b>Emerging signal</b>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="question-card">
+                <span class="question-number">02</span>
+                <div>
+                  <div class="question-head">
+                    <span>
+                      <small>LINKED TO · SOCIAL</small>
+                      <h3>How much do you trust local actors?</h3>
+                    </span>
+                    <button class="required-toggle on" type="button">
+                      <i></i>Required
+                    </button>
+                  </div>
+                  <div class="question-controls">
+                    <label>
+                      <span>Answer type</span>
+                      <select><option>Numeric scale</option></select>
+                    </label>
+                    <div class="option-control">
+                      <span><b>5</b> scale points</span><button type="button">Edit scale</button>
+                    </div>
+                    <div class="metric-link">
+                      <small>Decision metric</small><b>Trust index</b>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="question-card">
+                <span class="question-number">03</span>
+                <div>
+                  <div class="question-head">
+                    <span>
+                      <small>LINKED TO · SOCIAL</small>
+                      <h3>Did you receive clear feedback instructions?</h3>
+                    </span>
+                    <button class="required-toggle" type="button">
+                      <i></i>Optional
+                    </button>
+                  </div>
+                  <div class="question-controls">
+                    <label>
+                      <span>Answer type</span>
+                      <select><option>Single choice</option></select>
+                    </label>
+                    <div class="option-control">
+                      <span><b>3</b> options</span><button type="button">＋ Add option</button>
+                    </div>
+                    <div class="metric-link">
+                      <small>Decision metric</small><b>Coverage / access</b>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <aside class="panel field-quality">
+              <div class="panel-heading">
+                <div>
+                  <span class="eyebrow">FIELD QUALITY</span>
+                  <h2>Collection integrity</h2>
+                  <p>Digital checks protect the reliability of every chart.</p>
+                </div>
+              </div>
+              <div class="field-row">
+                <span>GPS verified <b>91%</b></span>
+                <i><em style="width:91%"></em></i>
+              </div>
+              <div class="field-row">
+                <span>Complete fields <b>96%</b></span>
+                <i><em style="width:96%"></em></i>
+              </div>
+              <div class="field-row">
+                <span>Balanced sample <b>78%</b></span>
+                <i><em style="width:78%"></em></i>
+              </div>
+              <div class="field-row">
+                <span>Successful sync <b>94%</b></span>
+                <i><em style="width:94%"></em></i>
+              </div>
+              <div class="field-alert">
+                <span>⌖</span>
+                <p>
+                  The digital form records collection time and location to
+                  detect single-point clustering and out-of-zone records.
+                </p>
+              </div>
+              <div class="survey-actions">
+                <button type="button">Save draft</button>
+                <button class="primary-button" type="button">Publish survey</button>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div>
+          <strong>GAZA / PULSE</strong>
+          <span>Community evidence and decision intelligence platform</span>
+        </div>
+        <p>
+          Illustrative prototype data · UI/UX concept for transparent
+          decision-making
+        </p>
+        <b>Version 3.0 · English</b>
+      </footer>
+    </main>
+  </body>
+</html>
