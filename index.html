@@ -1,8 +1,6 @@
-
 <!doctype html>
-
 <html lang="en" dir="ltr">
-   <head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
@@ -11,6 +9,7 @@
     >
     <title>GAZA / PULSE — Community Decision Intelligence</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <main class="dashboard">
@@ -47,8 +46,9 @@
       <aside class="prototype-note" aria-label="Prototype notice">
         <span>PROTOTYPE DATA</span>
         <p>
-          This is a UI/UX prototype. All figures are illustrative; filters and
-          actions are visual until live survey, FGD and KII feeds are connected.
+          This is a UI/UX prototype. All figures are illustrative; thematic and
+          demographic controls update the prototype locally until live survey,
+          FGD and KII feeds are connected.
         </p>
         <b>Last refresh 13:45</b>
       </aside>
@@ -109,6 +109,7 @@
             <a
               class="theme-card active"
               href="#analytics"
+              data-theme="social"
               style="--tile:#9b7cff;--tile-rgb:155,124,255"
             >
               <span class="theme-top"><i>◎</i><b>72.4</b></span>
@@ -125,6 +126,7 @@
             <a
               class="theme-card"
               href="#analytics"
+              data-theme="economic"
               style="--tile:#2dd4bf;--tile-rgb:45,212,191"
             >
               <span class="theme-top"><i>↗</i><b>64.8</b></span>
@@ -141,6 +143,7 @@
             <a
               class="theme-card"
               href="#analytics"
+              data-theme="political"
               style="--tile:#f6b84a;--tile-rgb:246,184,74"
             >
               <span class="theme-top"><i>◇</i><b>58.6</b></span>
@@ -157,6 +160,7 @@
             <a
               class="theme-card"
               href="#analytics"
+              data-theme="environmental"
               style="--tile:#4ade80;--tile-rgb:74,222,128"
             >
               <span class="theme-top"><i>⌁</i><b>76.2</b></span>
@@ -171,7 +175,7 @@
           </div>
         </section>
 
-        <section class="analytics-shell" id="analytics">
+        <section class="analytics-shell" id="analytics" aria-live="polite">
           <div class="analytics-header">
             <div class="selected-theme">
               <span>◎</span>

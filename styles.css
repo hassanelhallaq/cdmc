@@ -2329,6 +2329,46 @@ footer > b {
   font: 800 8px Arial, sans-serif;
 }
 
+.analytics-shell.theme-updated {
+  animation: dashboard-refresh 0.38s ease;
+}
+
+.series-line,
+.trend-dots circle,
+.trend-area,
+.bars span,
+.radar-value,
+.radar circle,
+.scatter-points circle,
+.coverage-row i em,
+.priority-row i em,
+.kpi-progress i b,
+.formula i em,
+.field-row i em {
+  transition: all 0.38s ease;
+}
+
+.kpi-value em.negative-delta {
+  color: var(--red);
+}
+
+.coverage-row.selected {
+  border-color: rgba(var(--accent-rgb), 0.38);
+  background: rgba(var(--accent-rgb), 0.09);
+}
+
+@keyframes dashboard-refresh {
+  0% {
+    opacity: 0.72;
+    transform: translateY(3px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1380px) {
   .topbar nav {
     gap: 18px;
