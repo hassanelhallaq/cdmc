@@ -23,11 +23,11 @@
         </a>
 
         <nav aria-label="Primary navigation">
-          <a href="#overview">Overview</a>
+          <a href="#overview" class="is-active">Overview</a>
           <a href="#themes">Thematic areas</a>
           <a href="#analytics">Analytics</a>
           <a href="#decisions">Decision center</a>
-          <a href="#survey">Survey builder</a>
+          <a href="survey.html">Survey builder</a>
         </nav>
 
         <div class="top-actions">
@@ -1027,97 +1027,35 @@
         <section class="survey-section" id="survey">
           <div class="section-heading survey-heading">
             <div>
-              <span class="eyebrow">SURVEY BUILDER</span>
-              <h2>Connect questions to decision metrics</h2>
+              <span class="eyebrow">SURVEY OPERATIONS</span>
+              <h2>Author forms in the Kobo-style builder</h2>
               <p>
-                Control answer type, required fields and options. Every question
-                must map to a metric or decision rule.
+                Question types, skip logic and metric mapping live on a dedicated
+                form page. Field quality still updates with the selected theme.
               </p>
             </div>
-            <button class="primary-button" type="button">＋ Add question</button>
+            <a class="primary-button" href="survey.html">Open form builder</a>
           </div>
 
           <div class="survey-layout">
-            <div class="question-list">
-              <article class="question-card">
-                <span class="question-number">01</span>
-                <div>
-                  <div class="question-head">
-                    <span>
-                      <small>LINKED TO · SOCIAL</small>
-                      <h3>Which issue most affects your daily life?</h3>
-                    </span>
-                    <button class="required-toggle on" type="button">
-                      <i></i>Required
-                    </button>
-                  </div>
-                  <div class="question-controls">
-                    <label>
-                      <span>Answer type</span>
-                      <select><option>Text answer</option></select>
-                    </label>
-                    <div class="control-placeholder">Open response coding</div>
-                    <div class="metric-link">
-                      <small>Decision metric</small><b>Emerging signal</b>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="question-card">
-                <span class="question-number">02</span>
-                <div>
-                  <div class="question-head">
-                    <span>
-                      <small>LINKED TO · SOCIAL</small>
-                      <h3>How much do you trust local actors?</h3>
-                    </span>
-                    <button class="required-toggle on" type="button">
-                      <i></i>Required
-                    </button>
-                  </div>
-                  <div class="question-controls">
-                    <label>
-                      <span>Answer type</span>
-                      <select><option>Numeric scale</option></select>
-                    </label>
-                    <div class="option-control">
-                      <span><b>5</b> scale points</span><button type="button">Edit scale</button>
-                    </div>
-                    <div class="metric-link">
-                      <small>Decision metric</small><b>Trust index</b>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="question-card">
-                <span class="question-number">03</span>
-                <div>
-                  <div class="question-head">
-                    <span>
-                      <small>LINKED TO · SOCIAL</small>
-                      <h3>Did you receive clear feedback instructions?</h3>
-                    </span>
-                    <button class="required-toggle" type="button">
-                      <i></i>Optional
-                    </button>
-                  </div>
-                  <div class="question-controls">
-                    <label>
-                      <span>Answer type</span>
-                      <select><option>Single choice</option></select>
-                    </label>
-                    <div class="option-control">
-                      <span><b>3</b> options</span><button type="button">＋ Add option</button>
-                    </div>
-                    <div class="metric-link">
-                      <small>Decision metric</small><b>Coverage / access</b>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
+            <article class="survey-launch">
+              <span class="eyebrow">CURRENT FORM</span>
+              <h3>Baseline perception survey</h3>
+              <p>
+                Linked to <b data-survey-theme>Social Cohesion</b>. The builder
+                uses a left question library, a form canvas, and a settings
+                drawer — the same authoring pattern as Kobo Toolbox.
+              </p>
+              <ul>
+                <li>Select One, Select Many, Text, Number, Date</li>
+                <li>Photo, Audio, GPS, Rating, Groups</li>
+                <li>Skip logic, validation, Preview and Deploy</li>
+              </ul>
+              <div class="survey-actions">
+                <a href="survey.html">Edit questions</a>
+                <a class="primary-button" href="survey.html">Open form builder</a>
+              </div>
+            </article>
 
             <aside class="panel field-quality">
               <div class="panel-heading">
@@ -1149,10 +1087,6 @@
                   The digital form records collection time and location to
                   detect single-point clustering and out-of-zone records.
                 </p>
-              </div>
-              <div class="survey-actions">
-                <button type="button">Save draft</button>
-                <button class="primary-button" type="button">Publish survey</button>
               </div>
             </aside>
           </div>

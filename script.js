@@ -801,12 +801,12 @@ const updateResponseLoop = (theme, metrics) => {
 const updateSurvey = (theme) => {
   const questions = [...document.querySelectorAll(".question-card")];
   questions.forEach((card, index) => {
-    card.querySelector(".question-head small").textContent =
-      `LINKED TO · ${theme.short.toUpperCase()}`;
-    card.querySelector(".question-head h3").textContent =
-      theme.questions[index][0];
-    card.querySelector(".metric-link b").textContent =
-      theme.questions[index][1];
+    const label = card.querySelector(".question-head small");
+    const heading = card.querySelector(".question-head h3");
+    const metric = card.querySelector(".metric-link b");
+    if (label) label.textContent = `LINKED TO · ${theme.short.toUpperCase()}`;
+    if (heading) heading.textContent = theme.questions[index][0];
+    if (metric) metric.textContent = theme.questions[index][1];
   });
 
   const fieldRows = [...document.querySelectorAll(".field-row")];
@@ -815,6 +815,9 @@ const updateSurvey = (theme) => {
     row.querySelector("b").textContent = `${value}%`;
     row.querySelector("em").style.width = `${value}%`;
   });
+
+  const launchTheme = document.querySelector("[data-survey-theme]");
+  if (launchTheme) launchTheme.textContent = theme.name;
 };
 
 const render = ({ animate = true } = {}) => {

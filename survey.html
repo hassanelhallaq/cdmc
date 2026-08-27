@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="GAZA / PULSE form builder — Kobo-style survey authoring linked to decision metrics."
+    >
+    <title>GAZA / PULSE — Form builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="survey.js" defer></script>
+  </head>
+  <body class="builder-page">
+    <main class="dashboard builder-shell">
+      <header class="topbar">
+        <a class="brand" href="index.html#overview" aria-label="GAZA PULSE home">
+          <span class="brand-mark" aria-hidden="true">⌁</span>
+          <span>
+            <strong>GAZA / PULSE</strong>
+            <small>Form builder</small>
+          </span>
+        </a>
+
+        <nav aria-label="Primary navigation">
+          <a href="index.html#overview">Overview</a>
+          <a href="index.html#themes">Thematic areas</a>
+          <a href="index.html#analytics">Analytics</a>
+          <a href="index.html#decisions">Decision center</a>
+          <a href="survey.html" class="is-active">Survey builder</a>
+        </nav>
+
+        <div class="top-actions builder-actions">
+          <span class="form-status" data-form-status>Draft</span>
+          <button class="ghost-button" type="button" data-action="preview">Preview</button>
+          <button class="ghost-button" type="button" data-action="save">Save draft</button>
+          <button class="primary-button" type="button" data-action="deploy">Deploy</button>
+        </div>
+      </header>
+
+      <div class="builder-workspace">
+        <aside class="builder-palette" id="question-palette" aria-label="Question types">
+          <div class="palette-head">
+            <span class="eyebrow">ADD QUESTION</span>
+            <h2>Question library</h2>
+            <label class="palette-search">
+              <span class="visually-hidden">Search question types</span>
+              <input type="search" placeholder="Search types…" data-palette-search>
+            </label>
+          </div>
+
+          <div class="palette-groups" data-palette-groups>
+            <section data-group="Default">
+              <h3>Default</h3>
+              <button type="button" data-add-type="select_one">
+                <b>◉</b><span>Select One<small>Single choice</small></span>
+              </button>
+              <button type="button" data-add-type="select_multiple">
+                <b>☑</b><span>Select Many<small>Multiple choice</small></span>
+              </button>
+              <button type="button" data-add-type="text">
+                <b>T</b><span>Text<small>Free response</small></span>
+              </button>
+              <button type="button" data-add-type="integer">
+                <b>#</b><span>Number<small>Integer</small></span>
+              </button>
+              <button type="button" data-add-type="decimal">
+                <b>.0</b><span>Decimal<small>Numeric value</small></span>
+              </button>
+              <button type="button" data-add-type="date">
+                <b>▦</b><span>Date<small>Calendar date</small></span>
+              </button>
+              <button type="button" data-add-type="time">
+                <b>◷</b><span>Time<small>Time of day</small></span>
+              </button>
+            </section>
+
+            <section data-group="Media">
+              <h3>Media</h3>
+              <button type="button" data-add-type="photo">
+                <b>▣</b><span>Photo<small>Image capture</small></span>
+              </button>
+              <button type="button" data-add-type="audio">
+                <b>♫</b><span>Audio<small>Voice recording</small></span>
+              </button>
+              <button type="button" data-add-type="video">
+                <b>▶</b><span>Video<small>Video capture</small></span>
+              </button>
+              <button type="button" data-add-type="file">
+                <b>▤</b><span>File<small>Attachment</small></span>
+              </button>
+            </section>
+
+            <section data-group="Location">
+              <h3>Location &amp; notes</h3>
+              <button type="button" data-add-type="geopoint">
+                <b>⌖</b><span>Point<small>GPS location</small></span>
+              </button>
+              <button type="button" data-add-type="note">
+                <b>ℹ</b><span>Note<small>Read-only text</small></span>
+              </button>
+              <button type="button" data-add-type="acknowledge">
+                <b>✓</b><span>Acknowledge<small>Confirmation</small></span>
+              </button>
+            </section>
+
+            <section data-group="Advanced">
+              <h3>Advanced</h3>
+              <button type="button" data-add-type="calculate">
+                <b>ƒ</b><span>Calculate<small>Hidden value</small></span>
+              </button>
+              <button type="button" data-add-type="rating">
+                <b>★</b><span>Rating<small>Scale / stars</small></span>
+              </button>
+              <button type="button" data-add-type="ranking">
+                <b>☰</b><span>Ranking<small>Order options</small></span>
+              </button>
+              <button type="button" data-add-type="range">
+                <b>↔</b><span>Range<small>Numeric slider</small></span>
+              </button>
+              <button type="button" data-add-type="begin_group">
+                <b>{ }</b><span>Group<small>Question group</small></span>
+              </button>
+            </section>
+          </div>
+        </aside>
+
+        <section class="builder-canvas" aria-label="Form canvas">
+          <div class="canvas-toolbar">
+            <button class="ghost-button palette-toggle" type="button" data-toggle="palette">
+              ＋ Add question
+            </button>
+            <div class="form-meta">
+              <label>
+                <span>Form name</span>
+                <input type="text" value="Baseline perception survey" data-form-title>
+              </label>
+              <label>
+                <span>Description</span>
+                <input
+                  type="text"
+                  value="Community evidence for GAZA / PULSE decision metrics."
+                  data-form-description
+                >
+              </label>
+            </div>
+            <p class="canvas-count"><b data-question-count>0</b> questions</p>
+          </div>
+
+          <div class="canvas-list" data-question-list></div>
+        </section>
+
+        <aside class="builder-settings" id="question-settings" aria-label="Question settings">
+          <div class="settings-empty" data-settings-empty>
+            <span class="eyebrow">QUESTION SETTINGS</span>
+            <h2>Select a question</h2>
+            <p>
+              Click a question in the form, or add one from the sidebar. Settings,
+              skip logic and metric mapping appear here.
+            </p>
+          </div>
+
+          <form class="settings-form" data-settings-form hidden>
+            <div class="settings-head">
+              <div>
+                <span class="eyebrow">QUESTION SETTINGS</span>
+                <h2 data-settings-type>Select One</h2>
+              </div>
+              <button class="ghost-button" type="button" data-toggle="settings">Done</button>
+            </div>
+
+            <label>
+              <span>Label</span>
+              <textarea rows="3" data-field="label"></textarea>
+            </label>
+
+            <label>
+              <span>Data column name</span>
+              <input type="text" data-field="name" autocomplete="off">
+            </label>
+
+            <label>
+              <span>Hint</span>
+              <input type="text" data-field="hint">
+            </label>
+
+            <div class="settings-row">
+              <button class="required-toggle" type="button" data-field="required">
+                <i></i><span>Optional</span>
+              </button>
+              <label class="grow">
+                <span>Decision metric</span>
+                <select data-field="metric">
+                  <option value="">Not linked</option>
+                  <option>Emerging signal</option>
+                  <option>Trust index</option>
+                  <option>Coverage / access</option>
+                  <option>Priority score</option>
+                  <option>Confidence</option>
+                  <option>Sample balance</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span>Appearance</span>
+              <select data-field="appearance">
+                <option value="">Default</option>
+                <option value="minimal">minimal</option>
+                <option value="horizontal">horizontal</option>
+                <option value="likert">likert</option>
+                <option value="compact">compact</option>
+                <option value="multiline">multiline</option>
+              </select>
+            </label>
+
+            <div class="settings-block" data-options-block>
+              <div class="settings-block-head">
+                <span>Options</span>
+                <button type="button" data-action="add-option">＋ Add option</button>
+              </div>
+              <div class="option-editor" data-option-list></div>
+            </div>
+
+            <div class="settings-block">
+              <label class="check-line">
+                <input type="checkbox" data-field="skipEnabled">
+                <span>Skip logic</span>
+              </label>
+              <div class="skip-grid" data-skip-fields>
+                <select data-field="skipQuestion" aria-label="Skip source question"></select>
+                <select data-field="skipOp" aria-label="Skip operator">
+                  <option value="selected">selected</option>
+                  <option value="not_selected">not selected</option>
+                  <option value="equals">equals</option>
+                  <option value="not_equals">not equals</option>
+                </select>
+                <input type="text" placeholder="Value" data-field="skipValue">
+              </div>
+            </div>
+
+            <div class="settings-block">
+              <label class="check-line">
+                <input type="checkbox" data-field="validationEnabled">
+                <span>Validation criteria</span>
+              </label>
+              <input type="text" placeholder="Constraint, e.g. . > 0" data-field="validationCondition">
+              <input type="text" placeholder="Error message" data-field="validationMessage">
+            </div>
+          </form>
+        </aside>
+      </div>
+    </main>
+
+    <div class="preview-layer" data-preview-layer hidden>
+      <div class="preview-sheet" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+        <header>
+          <div>
+            <span class="eyebrow">ENKETO PREVIEW</span>
+            <h2 id="preview-title">Collect form</h2>
+          </div>
+          <button class="ghost-button" type="button" data-action="close-preview">Close</button>
+        </header>
+        <p class="preview-lead" data-preview-description></p>
+        <form class="preview-form" data-preview-form></form>
+        <footer>
+          <button class="primary-button" type="button">Submit (prototype)</button>
+        </footer>
+      </div>
+    </div>
+
+    <div class="builder-toast" data-toast hidden></div>
+  </body>
+</html>
